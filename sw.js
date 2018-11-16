@@ -59,7 +59,7 @@ self.addEventListener('fetch', function(event) {
               // IMPORTANT: Clone the response. 
               var responseToCache = response.clone();
   
-              caches.open(CACHE_NAME)
+              caches.open(cacheName)
                 .then(function(cache) {
                   cache.put(event.request, responseToCache);
                 });
